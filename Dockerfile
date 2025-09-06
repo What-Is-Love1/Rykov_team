@@ -3,3 +3,5 @@ USER root
 RUN apk add --no-cache ffmpeg curl
 RUN chown -R node:node /home/node/.n8n
 USER node
+FROM n8nio/n8n
+RUN apt-get update && apt-get install -y pandoc unzip
